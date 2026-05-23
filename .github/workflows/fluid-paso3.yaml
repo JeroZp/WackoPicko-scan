@@ -3,7 +3,7 @@ name: Fluid Attacks - Paso 3
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   scan:
