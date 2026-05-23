@@ -12,13 +12,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: fluidattacks/sast-action@1.1.1
+      - uses: fluidattacks/sast-action@1.1.0
         id: scan
-        with:
-          scan_config_path: .github/configs/sast-config.yaml
 
       - name: Upload SARIF
         if: always()
-        uses: github/codeql-action/upload-sarif@v4
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: ${{ steps.scan.outputs.sarif_file }}

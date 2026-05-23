@@ -14,8 +14,6 @@ jobs:
 
       - uses: fluidattacks/sca-action@1.0.0
         id: scan
-        with:
-          scan_config_path: .github/configs/sca-config.yaml
 
       - name: Upload SARIF
         if: always()
