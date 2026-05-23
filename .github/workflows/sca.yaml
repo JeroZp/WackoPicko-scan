@@ -18,6 +18,14 @@ jobs:
       - uses: fluidattacks/sca-action@1.0.0
         id: scan
 
+      - name: Upload CSV report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sca-csv-report
+          path: results-sca.csv
+          if-no-files-found: warn
+
       - name: Upload SARIF
         if: always() && hashFiles('results-sca.sarif') != ''
         uses: github/codeql-action/upload-sarif@v4
