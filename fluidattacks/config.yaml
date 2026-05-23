@@ -1,7 +1,0 @@
-namespace: wackopicko
-language: EN
-working_dir: .
-output:
-  file_path: ./reports
-  format: CSV
-strictness: low
