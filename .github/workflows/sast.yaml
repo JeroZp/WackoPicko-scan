@@ -23,7 +23,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: sast-csv-report
-          path: results.csv
+          path: "*.csv"
           if-no-files-found: warn
 
       - name: Upload SARIF

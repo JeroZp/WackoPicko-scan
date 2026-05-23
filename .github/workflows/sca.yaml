@@ -23,7 +23,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: sca-csv-report
-          path: results-sca.csv
+          path: "*.csv"
           if-no-files-found: warn
 
       - name: Upload SARIF
