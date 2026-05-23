@@ -1,0 +1,12 @@
+language: EN
+strict: false
+output:
+  file_path: .fluidattacks-sast-results.sarif
+  format: SARIF
+sast:
+  include:
+    - .
+  exclude:
+    - node_modules
+    - vendor
+    - .git
